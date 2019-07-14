@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Shorter and Readable Syntax - Laravel Guidelines</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/laravel-best-practices/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="http://localhost:4000/laravel-best-practices/assets/css/just-the-docs.css">
+
+  
+
+  
+    <script type="text/javascript" src="http://localhost:4000/laravel-best-practices/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/laravel-best-practices/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Shorter and Readable Syntax | Laravel Guidelines</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Shorter and Readable Syntax" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Laravel Coding Guidelines &amp; Best Practices" />
+<meta property="og:description" content="Laravel Coding Guidelines &amp; Best Practices" />
+<link rel="canonical" href="http://localhost:4000/laravel-best-practices/docs/shorter-readable-syntax/" />
+<meta property="og:url" content="http://localhost:4000/laravel-best-practices/docs/shorter-readable-syntax/" />
+<meta property="og:site_name" content="Laravel Guidelines" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/laravel-best-practices/docs/shorter-readable-syntax/","headline":"Shorter and Readable Syntax","description":"Laravel Coding Guidelines &amp; Best Practices","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="http://localhost:4000/laravel-best-practices" class="site-title fs-6 lh-tight">Laravel Guidelines</a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        <nav role="navigation" aria-label="Main navigation">
+  <ul class="navigation-list">
+    
+    
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/" class="navigation-list-link">Home</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/naming-conventions/" class="navigation-list-link">Naming Conventions</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/shorter-readable-syntax/" class="navigation-list-link active">Shorter and Readable Syntax</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/avoid-fat-controllers/" class="navigation-list-link">Avoid Fat Controllers</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/business-logics-repositories/" class="navigation-list-link">Business logics in Repositories</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/dont-repeat-yourself/" class="navigation-list-link">Don't repeat yourself (DRY)</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/prefer-eloquent/" class="navigation-list-link">Prefer to use Eloquent over raw SQL queries</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/mass-assignment/" class="navigation-list-link">Mass assignment</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/avoid-queries-blade-template/" class="navigation-list-link">Avoid Queries in Blade Templates & Use Eager Loading</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/avoid-js-css-blade-template/" class="navigation-list-link">Don't put JS and CSS in Blade</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/use-constants-config-lang/" class="navigation-list-link">Use constants and config</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/single-repository-principle/" class="navigation-list-link">Single responsibility principle</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/ioc-container/" class="navigation-list-link">Use IoC Container for Long Term Projects</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/validation/" class="navigation-list-link">Use Request class for validations</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/avoid-env-variable-directly/" class="navigation-list-link">Do not get data from the .env file directly</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/use-accessors-mutators/" class="navigation-list-link">Use accessors and mutators</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/use-standard-laravel-tools/" class="navigation-list-link">Use standard laravel tools</a>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/laravel-best-practices/docs/other-good-practices/" class="navigation-list-link">Other good practices</a>
+            
+          </li>
+        
+      
+    
+  </ul>
+</nav>
+
+      </div>
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-0">
+          Build with Jekyll and <span class="love">❤</span> by <a href="https://github.com/xqsit">xQsit</a>
+        </p>
+      </footer>
+    </div>
+    <div class="main-content-wrap js-main-content" tabindex="0">
+      <div class="page-header">
+        <div class="main-content">
+          
+          <div class="search js-search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search Laravel Guidelines" aria-label="Search Laravel Guidelines" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="main-content">
+        
+          
+        
+        <div id="main-content" class="page-content" role="main">
+          <h2 id="use-shorter-and-more-readable-syntax-where-possible">Use shorter and more readable syntax where possible</h2>
+
+<p>Bad:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">session</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'cart'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">input</span><span class="p">(</span><span class="s1">'name'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Good:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">session</span><span class="p">(</span><span class="s1">'cart'</span><span class="p">);</span>
+<span class="nv">$request</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>More examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Common syntax</th>
+      <th>Shorter and more readable syntax</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Session::get('cart')</code></td>
+      <td><code class="highlighter-rouge">session('cart')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$request-&gt;session()-&gt;get('cart')</code></td>
+      <td><code class="highlighter-rouge">session('cart')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Session::put('cart', $data)</code></td>
+      <td><code class="highlighter-rouge">session(['cart' =&gt; $data])</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$request-&gt;input('name'), Request::get('name')</code></td>
+      <td><code class="highlighter-rouge">$request-&gt;name, request('name')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">return Redirect::back()</code></td>
+      <td><code class="highlighter-rouge">return back()</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">is_null($object-&gt;relation) ? null : $object-&gt;relation-&gt;id</code></td>
+      <td><code class="highlighter-rouge">optional($object-&gt;relation)-&gt;id</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">return view('index')-&gt;with('title', $title)-&gt;with('client', $client)</code></td>
+      <td><code class="highlighter-rouge">return view('index', compact('title', 'client'))</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">$request-&gt;has('value') ? $request-&gt;value : 'default';</code></td>
+      <td><code class="highlighter-rouge">$request-&gt;get('value', 'default')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Carbon::now(), Carbon::today()</code></td>
+      <td><code class="highlighter-rouge">now(), today()</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">App::make('Class')</code></td>
+      <td><code class="highlighter-rouge">app('Class')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;where('column', '=', 1)</code></td>
+      <td><code class="highlighter-rouge">-&gt;where('column', 1)</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;orderBy('created_at', 'desc')</code></td>
+      <td><code class="highlighter-rouge">-&gt;latest()</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;orderBy('age', 'desc')</code></td>
+      <td><code class="highlighter-rouge">-&gt;latest('age')</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;orderBy('created_at', 'asc')</code></td>
+      <td><code class="highlighter-rouge">-&gt;oldest()</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;select('id', 'name')-&gt;get()</code></td>
+      <td><code class="highlighter-rouge">-&gt;get(['id', 'name'])</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-&gt;first()-&gt;name</code></td>
+      <td><code class="highlighter-rouge">-&gt;value('name')</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
