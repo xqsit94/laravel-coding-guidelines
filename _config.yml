@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Laravel Guidelines
 description: Laravel Coding Guidelines & Best Practices
-baseurl: "/laravel-best-practices" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xqsit.github.io/laravel-coding-guidelines" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
