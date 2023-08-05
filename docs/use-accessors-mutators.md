@@ -1,10 +1,6 @@
----
-layout: default
-title: Use accessors and mutators
-nav_order: 14
----
+# Use Accessors and Mutators
 
-## Use Accessors and Mutators instead of mutating in controllers and blade
+Use Accessors and Mutators instead of mutating in controllers and blade
 
 Bad:
 
@@ -19,12 +15,12 @@ Good:
 // Model
 protected $dates = ['ordered_at', 'created_at', 'updated_at'];
 
-public function getSomeDateAttribute($date)
+public function getSomeDateAttribute(DateTime $date): string
 {
     return $date->format('m-d');
 }
 
 // View
-{% raw %}{{ $object->ordered_at->toDateString() }}{% endraw %}
-{% raw %}{{ $object->ordered_at->some_date }}{% endraw %}
+{{ $object->ordered_at->toDateString() }}
+{{ $object->ordered_at->some_date }}
 ```

@@ -18,7 +18,7 @@ session('cart');
 $request->name;
 ```
 
-More examples:
+### More examples:
 
 | Common syntax                                                          | Shorter and more readable syntax                   |
 |------------------------------------------------------------------------|----------------------------------------------------|

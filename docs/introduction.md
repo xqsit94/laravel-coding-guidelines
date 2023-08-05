@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the documentation website for Laravel Coding Standards! This comprehensive guide is designed to help developers understand and adopt best practices for writing clean, maintainable, and consistent code within Laravel projects. Whether you are a seasoned Laravel developer or just getting started, adhering to these coding standards will not only improve the quality of your codebase but also make it easier for your team to collaborate effectively.
+Welcome to the documentation website for Laravel Coding Guidelines! This comprehensive guide is designed to help developers understand and adopt best practices for writing clean, maintainable, and consistent code within Laravel projects. Whether you are a seasoned Laravel developer or just getting started, adhering to these coding standards will not only improve the quality of your codebase but also make it easier for your team to collaborate effectively.
 
 ## What are Coding Standards?
 
@@ -32,4 +32,4 @@ This documentation is structured to provide a clear and concise explanation of e
 
 It is essential to encourage all developers working on your Laravel project to read and adopt these coding standards. Consistent adherence to these guidelines will foster a more efficient, robust, and maintainable codebase, benefiting both current and future development efforts.
 
-Let's get started on our journey to improve the quality and maintainability of your Laravel projects through consistent and reliable coding standards!
+Let's get started on our journey to improve the quality and maintainability of your Laravel projects through consistent and reliable coding guidelines!
