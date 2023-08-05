@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Laravel Coding Guidelines",
   description: "Laravel Coding Guidelines",
+  base: '/laravel-coding-guidelines/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: 'Laravel Coding Guidelines',
