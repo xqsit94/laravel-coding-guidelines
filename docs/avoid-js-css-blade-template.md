@@ -1,10 +1,4 @@
----
-layout: default
-title: Don't put JS and CSS in Blade
-nav_order: 9
----
-
-## Do not put JS and CSS in Blade templates and do not put any HTML in PHP classes
+# Do not put JS and CSS in Blade templates and do not put any HTML in PHP classes
 
 Bad:
 

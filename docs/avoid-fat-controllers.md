@@ -1,17 +1,11 @@
----
-layout: default
-title: Avoid Fat Controllers
-nav_order: 3
----
-
-## Avoid fat controllers and write frequent queries in model.
+# Avoid fat controllers and write frequent queries in model.
 
 Put all DB related logic into Eloquent models or into Repository classes if you're using Query Builder or raw SQL queries.
 
 Bad:
 
 ```php
-public function index()
+public function index(): View
 {
     $clients = Client::verified()
         ->with(['orders' => function ($q) {
@@ -26,14 +20,14 @@ public function index()
 Good:
 
 ```php
-public function index()
+public function index(): View
 {
     return view('index', ['clients' => $this->client->getWithNewOrders()]);
 }
 
 class Client extends Model
 {
-    public function getWithNewOrders()
+    public function getWithNewOrders(): Collection
     {
         return $this->verified()
             ->with(['orders' => function ($q) {

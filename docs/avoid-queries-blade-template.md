@@ -1,10 +1,6 @@
----
-layout: default
-title: Avoid Queries in Blade Templates & Use Eager Loading
-nav_order: 8
----
+# Avoid queries in Blade templates
 
-## Do not execute queries in Blade templates and use eager loading (N + 1 problem)
+### Do not execute queries in Blade templates and use eager loading (N + 1 problem)
 
 Bad (for 100 users, 101 DB queries will be executed):
 

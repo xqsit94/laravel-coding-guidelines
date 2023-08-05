@@ -1,10 +1,4 @@
----
-layout: default
-title: Mass assignment
-nav_order: 7
----
-
-## Mass assignment
+# Mass assignment
 
 Bad:
 
