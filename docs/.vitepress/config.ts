@@ -17,8 +17,9 @@ export default defineConfig({
     },
 
     nav: [
+      { text: 'Guides', link: '/introduction' },
       { text: 'Naming Conventions', link: '/naming-conventions' },
-      { text: 'Shorter Syntax', link: '/shorter-readable-syntax' },
+      { text: 'Shorter Syntax', link: '/shorter-readable-syntax#more-examples' },
     ],
 
     sidebar: [
@@ -37,6 +38,12 @@ export default defineConfig({
           { text: 'Avoid queries in Blade template', link: '/avoid-queries-blade-template' },
           { text: 'Don\'t put js and css in Blade', link: '/avoid-js-css-blade-template' },
           { text: 'Use PHP Type declaration', link: '/php-type-declaration' },
+          { text: 'Use IoC container for long term projects', link: '/ioc-container' },
+          { text: 'Use constants and language helper', link: '/use-constants-language-helper' },
+          { text: 'Use config helper', link: '/config-helper' },
+          { text: 'Use Request class for validations', link: '/validation' },
+          { text: 'Use Accessors and Mutators', link: '/use-accessors-mutators' },
+          { text: 'Use standard Laravel tools', link: '/use-standard-laravel-tools' },
           { text: 'Other good practices', link: '/other-good-practices' },
         ]
       }

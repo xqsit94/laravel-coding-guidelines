@@ -1,10 +1,4 @@
----
-layout: default
-title: Use IoC Container for Long Term Projects
-nav_order: 12
----
-
-## Use IoC container or facades instead of new Class.
+# Use IoC container for long term projects
 
 new Class syntax creates tight coupling between classes and complicates testing. Use IoC container or facades instead.
 
