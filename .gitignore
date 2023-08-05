@@ -1,1 +1,12 @@
-/node_modules
+# Vitepress
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# Logs
+.DS_Store
+
+# node_modules
+node_modules
+
+# IDE
+.idea

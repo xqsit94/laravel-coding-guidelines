@@ -1,46 +1,41 @@
----
-layout: default
-title: Don't repeat yourself (DRY)
-nav_order: 5
----
-
-## Don't repeat yourself (DRY)
+# Don't repeat yourself (DRY)
 
 Reuse code when you can. SRP is helping you to avoid duplication. Also, reuse Blade templates, use Eloquent scopes etc.
 
 Bad:
 
 ```php
-public function getActive()
+public function getActive(): Collection
 {
     return $this->where('verified', 1)->whereNotNull('deleted_at')->get();
 }
 
-public function getArticles()
+public function getArticles(): Collection
 {
-    return $this->whereHas('user', function ($q) {
-            $q->where('verified', 1)->whereNotNull('deleted_at');
+    return $this->whereHas('user', function ($query) {
+            $query->where('verified', 1)->whereNotNull('deleted_at');
         })->get();
 }
+
 ```
 
 Good:
 
 ```php
-public function scopeActive($q)
+public function scopeActive(Builder $query): Builder
 {
-    return $q->where('verified', 1)->whereNotNull('deleted_at');
+    return $query->where('verified', 1)->whereNotNull('deleted_at');
 }
 
-public function getActive()
+public function getActive(): Collection
 {
     return $this->active()->get();
 }
 
-public function getArticles()
+public function getArticles(): Collection
 {
-    return $this->whereHas('user', function ($q) {
-            $q->active();
+    return $this->whereHas('user', function ($query) {
+            $query->active();
         })->get();
 }
 ```
