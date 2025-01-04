@@ -7,13 +7,13 @@ Bad:
 ```php
 public function getActive(): Collection
 {
-    return $this->where('verified', 1)->whereNotNull('deleted_at')->get();
+    return $this->where('verified', 1)->whereNull('deleted_at')->get();
 }
 
 public function getArticles(): Collection
 {
     return $this->whereHas('user', function ($query) {
-            $query->where('verified', 1)->whereNotNull('deleted_at');
+            $query->where('verified', 1)->whereNull('deleted_at');
         })->get();
 }
 
@@ -24,7 +24,7 @@ Good:
 ```php
 public function scopeActive(Builder $query): Builder
 {
-    return $query->where('verified', 1)->whereNotNull('deleted_at');
+    return $query->where('verified', 1)->whereNull('deleted_at');
 }
 
 public function getActive(): Collection
