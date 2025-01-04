@@ -1,13 +1,9 @@
-import { defineConfig } from 'vitepress'
-
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default {
   title: "Laravel Coding Guidelines",
   description: "Laravel Coding Guidelines",
   base: '/laravel-coding-guidelines/',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     siteTitle: 'Laravel Coding Guidelines',
 
     logo: '/logo.png',
@@ -53,4 +49,4 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/xqsit94/laravel-coding-guidelines' }
     ]
   }
-})
+}
