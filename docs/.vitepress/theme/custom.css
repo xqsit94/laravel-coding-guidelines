@@ -6,4 +6,12 @@
     --vp-button-brand-hover-border: #ef533f;
     --vp-button-brand-active-bg: #ff381e;
     --vp-button-brand-active-border: #ff7b6a;
+    --vp-button-brand-bg: #ef533f;
+    --vp-home-hero-name-color: #ef533f;
+    --vp-c-brand-1: #ef533f;
+    --vp-code-color: #24292f;
+}
+
+.dark {
+    --vp-code-color: #c7dcee;
 }
